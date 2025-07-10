@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+
+@import '../fonts/pretendard/pretendard.css';
+@import '../fonts/SCoreDream/SCoreDream.css';
+@import url('reset.css');
+@import url('icon.css');
+
+
+/*************************************************************************
+* @ 서비스경로 : assets > css > commonui
+* @ 파일명    : commonui.css
+* @ 작성자    : 김은옥 (publisher@to-be.co.kr)
+* @ 작성일    : 2025-07-09
+************************** 수정이력 ****************************************
+* 날짜                    작업자                 변경내용
+*_________________________________________________________________________
+* 2025-07-09             김은옥                 최초작성
+*************************************************************************/
+
+
+/************************************ Layout Style S ************************************/
+    html{font-size:100px;}
+    body{color:#1d1d1d;background:#FFFFFF;box-sizing:border-box;}
+    a,button{position:relative;vertical-align:middle;/*border:solid 0.02rem transparent;*/box-sizing:border-box;}
+    /**:focus{border-style:dashed ! important;border-color:#369 ! important;border-width:0.02rem;}*/
+    /* SkipMenu */
+    #skip-menu a{display:block;font-size:0;border:none;background:#3bbcd9;}
+    #skip-menu a:focus span{display:block;padding:0.1rem;color:#fff;font-size:0.18rem;text-align:center;}
+    /* Base */
+    #view-wrap{position:relative;margin:auto;padding:0.2rem 0.4rem 0.2rem 0.2rem;width:19.2rem;height:9.6rem;background:#F4F4F4;box-sizing:border-box;}
+    #header{position: relative;;float:left;padding:0.2rem 0.04rem;width:0.88rem;height:100%;text-align:center;border-radius:0.12rem;background:#1D1D1D;box-sizing:border-box;}
+    #header .icon_logo{margin-bottom:0.24rem;}
+    #header a{display:block;padding:0.1rem 0;width:0.8rem;height:0.72rem;border-radius:0.08rem;opacity:0.5;}
+    #header a.active{background: linear-gradient(135deg, #034EA2 0%, #0A3B61 100%);opacity:1;}
+    #header a i{display:block;margin:0.04rem auto;}
+    #header a span{display:block;line-height:0.17rem;color:#fff;font-size:0.12rem;font-weight:700;}
+    #header *[class^="btn-"]{position:absolute;left:0.04rem;bottom:0.2rem;}
+    #header *[class^="btn-"] i{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);}
+    #header *[class^="btn-setup"]{bottom:0.9rem;}
+    #content-wrap{position:relative;margin-left:1.08rem;height:100%;}
+    h1{margin-top:-0.2rem;padding-left:0.4rem;line-height:1.08rem;font-size:0.28rem;}
+    h5{line-height:0.25rem;font-size:0.18rem;}
+/************************************ Layout Style S ************************************/
+
+
+/************************************ Sample S ************************************/
+    /* Home */
+    #view-wrap.home{background:#fff;}
+    .home-wrap{display:flex;}
+    .home-wrap > *{width:100%;}
+    .home-wrap > .l-content{padding:0.4rem;border-radius:0.16rem;background:#f5f5f5;}
+    .home-wrap > .l-content > *{position: relative;;border-radius:0.12rem;font-size:0;background:#fff;overflow:hidden;}
+    .home-wrap > .l-content > * + *{margin-top:0.16rem;height:3.2rem;}
+    .home-wrap > .l-content .top .group-text{position:absolute;left:0.48rem;top:0.42rem;}
+    .home-wrap > .l-content .top .group-text .tit{margin-bottom:0.08rem;line-height:0.45rem;font-size:0.32rem;font-weight:bold;}
+    .home-wrap > .l-content .top .group-text .txt{line-height:0.2rem;font-size:0.14rem;}
+    .home-wrap > .l-content .bottom{border:solid 0.01rem #EFEFEF;}
+    .home-wrap > .l-content .bottom tr > *{padding-left:0.24rem;height:0.39rem;font-size:0.14rem;text-align:left;border-top:solid 0.01rem #EFEFEF;border-left:solid 0.01rem #EFEFEF;}
+    .home-wrap > .l-content .bottom thead tr > *{color:#fff;background:#1D1D1D;}
+    .home-wrap > .r-content{margin-left:0.2rem;max-width:8.12rem;}
+    .home-wrap > .r-content > *{height:2.6rem;}
+    .home-wrap > .r-content > * + *{margin-top:0.16rem;height:5.54rem;}
+
+    .status-box{position:relative;padding:0.32rem;border-radius:0.12rem;border:solid 0.01rem #EFEFEF;box-sizing:border-box;}
+    .status-box > .inner + .inner{margin-top:0.24rem;}
+    .status-box .title{position:relative;}
+    .status-box .title .r-group{position:absolute;right:0;top:0;line-height:0.25rem;font-size:0.14rem;}
+    .status-box .title .r-group i{margin:0 0.02rem 0 0.16rem;width:0.24rem;height:0.24rem;}
+    .status-box .status{margin-bottom:0.18rem;text-align:center;}
+    .status-box .status strong{display:block;line-height:0.67rem;font-size:0.48rem;}
+    .status-box .status p{line-height:0.24rem;font-size:0.12rem;}
+    .status-box .status em{display:inline-block;margin-left:0.08rem;width:0.24rem;line-height:0.24rem;color:#fff;font-size:0.12rem;font-weight:bold;border-radius:50%;}
+    .status-box .status .a{background:#8839F0;}
+    .status-box .status .b{background:#1DB198;}
+    .status-box .status .c{background:#D257B3;}
+    .status-box .good{color:#41A450;}
+    .status-box .cautio{color:#FF7950;}
+    .status-box .warning{color:#ED1C24;}
+    .status-box .item{display:flex;}
+    .status-box .item > *{width:100%;text-align:center;border-radius:0.08rem;}
+    .status-box .item > * + *{margin-left:0.16rem;border-left:solid 0.01rem #efefef;}
+    .status-box .item dt{margin-bottom:0.04rem;line-height:0.2rem;font-size:0.14rem;font-weight:bold;}
+    .status-box .item dd{line-height:0.39rem;font-size:0.28rem;font-weight:bold;}
+    .status-box .graph{display:flex;margin-top:0.16rem;}
+    .status-box .graph dl{padding:0.08rem 0.12rem;}
+    .status-box .graph dt{position:relative;margin-bottom:0.08rem;line-height:0.24rem;font-size:0.12rem;font-weight:bold;}
+    .status-box .graph dt em{display:inline-block;margin-left:0.02rem;font-weight:normal;}
+    .status-box .graph i{position:absolute;right:0;top:50%;width:0.24rem;height:0.24rem;transform:translateY(-50%);}
+    .status-box .graph dd span{display:block;line-height:0.14rem;font-size:0.1rem;text-align:center;}
+    .status-box .graph dd > em{display:block;line-height:0.14rem;font-size:0.1rem;color:#ED1C24;text-align:center;}
+    .status-box .graph .gauge{position:relative;margin:0 auto 0.11rem auto;width:1.5rem;height:0.68rem;background:var(--bg-graph) no-repeat bottom center/1.11rem auto;}
+    .status-box .graph .gauge .center{position:absolute;left:calc(50% - 0.07rem);top:calc(100% - 0.02rem);width:0.06rem;height:0.06rem;border:solid 0.03rem #1D1D1D;border-radius:50%;background:#fff;z-index:1;}
+    .status-box .graph .gauge .line{position:relative;margin:auto;width:1.36rem;height:0.68rem;}
+    .status-box .graph .gauge .line p{position:absolute;left:0;bottom:0;width:100%;height:0.01rem;}
+    .status-box .graph .gauge .line p:before{display:block;content:'';position:absolute;left:0.1rem;top:calc(50% - 0.03rem);width:0.06rem;height:0.06rem;border-radius:50%;background:#1D1D1D;}
+    .status-box .graph .gauge .line p i{position:absolute;left:0;bottom:0;width:50%;height:0.01rem;background:#1D1D1D;}
+    .status-box .graph .gauge .line p em{position:absolute;left:0;top:50%;margin-top:-0.05rem;line-height:0.1rem;width:0.1rem;font-size:0.09rem;text-align:center;background:#fff;transform:rotate(-90deg);}
+    .status-box .graph > *{padding:0.14rem;width:100%;border-radius:0.08rem;border:solid 0.01rem #efefef;}
+    .status-box .graph > * + *{margin-left:0.16rem;}
+    .status-box .gray{display:flex;margin-top:0.16rem;}
+    .status-box .gray > *{padding:0.14rem;width:100%;border-radius:0.08rem;background:#F4F4F4;}
+    .status-box .gray > * + *{margin-left:0.16rem;}
+    .status-box .gray dt{margin-bottom:0.08rem;line-height:0.24rem;font-size:0.14rem;text-align:center;border-radius:0.04rem;background:#fff;}
+    .status-box .gray dd{position:relative;}
+    .status-box .gray dd i{position:absolute;right:0;top:50%;transform:translateY(-50%);}
+    .status-box .gray dd strong{display:block;;margin-bottom:0.04rem;line-height:0.2rem;font-size:0.14rem;}
+    .status-box .gray dd span{display:block;line-height:0.17rem;font-size:0.12rem;}
+/************************************ Sample S ************************************/
+
+
+/************************************ Responsive Style - PC S ************************************/
+    @media screen and (min-width: 6400px){
+        html{font-size:120px;}
+    }
+/************************************ Responsive Style - PC E ************************************/
+
+
+/************************************ Responsive Style - PC S ************************************/
+    @media screen and (min-width: 2300px){
+        html{font-size:115px;}
+    }
+/************************************ Responsive Style - PC E ************************************/
+
+
+/************************************ Responsive Style - PC S ************************************/
+    @media screen and (min-width: 2200px){
+        html{font-size:110px;}
+    }
+/************************************ Responsive Style - PC E ************************************/
